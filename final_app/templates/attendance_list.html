@@ -1,0 +1,38 @@
+<!-- templates/attendance_list.html -->
+{% extends 'base.html' %}
+
+{% block title %}Attendance List{% endblock %}
+{% block header_title %}Attendance List{% endblock %}
+
+{% block content %}
+    <h2>Attendance List</h2>
+
+    <section class="new-attendance">
+        <a href="{% url 'create-attendance' %}">
+            <button>Create New Attendance</button>
+        </a>
+    </section>
+
+    {% if attendances %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee</th>
+                    <th>Check-In</th>
+                    <th>Check-Out</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for attendance in attendances %}
+                    <tr>
+                        <td>{{ attendance.employee.name }}</td>
+                        <td>{{ attendance.check_in }}</td>
+                        <td>{{ attendance.check_out }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No attendance records available.</p>
+    {% endif %}
+{% endblock %}

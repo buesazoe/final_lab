@@ -1,0 +1,46 @@
+<!-- templates/employee_detail.html -->
+{% extends 'base.html' %}
+
+{% block title %}Employee Detail{% endblock %}
+{% block header_title %}Employee Detail{% endblock %}
+
+{% block content %}
+    <h2>Employee Detail</h2>
+    
+    {% if employee %}
+        <table class="employee-detail">
+            <tr>
+                <th>Name:</th>
+                <td>{{ employee.name }}</td>
+            </tr>
+            <tr>
+                <th>Email:</th>
+                <td>{{ employee.email }}</td>
+            </tr>
+            <tr>
+                <th>Age:</th>
+                <td>{{ employee.age }}</td>
+            </tr>
+            <tr>
+                <th>Salary:</th>
+                <td>{{ employee.salary }}</td>
+            </tr>
+            <tr>
+                <th>Department:</th>
+                <td>{{ employee.department.name }}</td>
+            </tr>
+            <!-- Add this section to display the employee's image -->
+            {% if employee.image %}
+                <tr>
+                    <th>Image:</th>
+                    <td><img src="{{ employee.image.url }}" alt="{{ employee.name }}'s Image"></td>
+                </tr>
+            {% endif %}
+            <!-- End of image display section -->
+        </table>
+    {% else %}
+        <p>Employee not found.</p>
+    {% endif %}
+    
+    <a href="{% url 'employee-list' %}">Back to Employee List</a>
+{% endblock %}

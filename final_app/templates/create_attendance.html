@@ -1,0 +1,17 @@
+<!-- templates/create_attendance.html -->
+{% extends 'base.html' %}
+
+{% block title %}Create Attendance{% endblock %}
+{% block header_title %}Create Attendance{% endblock %}
+
+{% block content %}
+  <h2>Create Attendance</h2>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save Attendance</button>
+  </form>
+
+  <a href="{% url 'attendance-list' %}">Back to Attendance List</a>
+{% endblock %}

@@ -1,0 +1,36 @@
+<!-- templates/leave_request_list.html -->
+{% extends 'base.html' %}
+
+{% block title %}Leave Requests{% endblock %}
+
+{% block content %}
+  <section class="leave-requests">
+    <h2>Leave Requests</h2>
+    {% if leave_requests %}
+      <table class="leave-requests-table">
+        <thead>
+          <tr>
+            <th>Employee</th>
+            <th>Leave Period</th>
+            <th>Reason</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for leave_request in leave_requests %}
+            <tr>
+              <td>{{ leave_request.employee.name }}</td>
+              <td>{{ leave_request.start_date }} to {{ leave_request.end_date }}</td>
+              <td>{{ leave_request.reason }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No leave requests available.</p>
+    {% endif %}
+  </section>
+
+  <section class="new-leave-request">
+    <a href="{% url 'leave-request-create' %}"><button>Create New Leave Request</button></a>
+  </section>
+{% endblock %}

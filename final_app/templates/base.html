@@ -1,0 +1,58 @@
+<!-- templates/base.html -->
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block page_title %}Final Lab Project{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>{% block header_title %}HRM System{% endblock %}</h1>
+    </header>
+    
+    <nav>
+        <a href="{% url 'department-list' %}">Departments</a>
+        <a href="{% url 'employee-list' %}">Employees</a>
+        <a href="{% url 'leave-request-list' %}">Leave Requests</a>
+        <a href="{% url 'attendance-list' %}">Attendances</a>
+        <a href="{% url 'task-list' %}">Tasks</a>
+        <a href="{% url 'home' %}">Home</a>
+    </nav>
+
+    <main>
+        {% block content %}
+        <section class="intro">
+            <h2>Welcome to our Employee Management System!</h2>
+            <p>We are a leading computer science company committed to enhancing workplace efficiency and employee satisfaction. Our Human Resource Management (HRM) System is designed to streamline various aspects of employee management, making daily tasks more convenient and accessible.</p>
+        </section>
+    
+        <section class="features">
+            <h3>Key Features:</h3>
+            <ul>
+                <li>Effortless Attendance Tracking</li>
+                <li>Leave Request Management</li>
+                <li>Departmental Information</li>
+                <li>Employee Database</li>
+                <li>Task Assignment and Monitoring</li>
+            </ul>
+        </section>
+    
+        <section class="usage">
+            <h3>How to Use:</h3>
+            <p>Our website provides a user-friendly interface for employees to manage their attendance and file leave requests conveniently. Navigate through the following sections for a seamless experience:</p>
+            <ul>
+                <li><a href="{% url 'attendance-list' %}">Attendance</a> - Log and monitor your daily attendance.</li>
+                <li><a href="{% url 'leave-request-list' %}">Leave Requests</a> - Submit and track your leave requests with ease.</li>
+                <li><a href="{% url 'department-list' %}">Departments</a> - Explore information about different departments in our organization.</li>
+                <li><a href="{% url 'employee-list' %}">Employees</a> - Access details about your colleagues and team members.</li>
+                <li><a href="{% url 'task-list' %}">Tasks</a> - Stay organized by managing and monitoring assigned tasks.</li>
+            </ul>
+        </section>
+        {% endblock %}
+    </main>
+</body>
+</html>

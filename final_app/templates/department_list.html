@@ -1,0 +1,28 @@
+<!-- templates/department_list.html -->
+{% extends 'base.html' %}
+
+{% block title %}Department List{% endblock %}
+{% block header_title %}Department List{% endblock %}
+
+{% block content %}
+    <h2>Department List</h2>
+    
+    {% if departments %}
+        <table class="department-table">
+            <thead>
+                <tr>
+                    <th>Department Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for department in departments %}
+                    <tr>
+                        <td>{{ department.name }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No departments available.</p>
+    {% endif %}
+{% endblock %}

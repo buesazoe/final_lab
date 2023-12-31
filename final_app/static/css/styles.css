@@ -1,0 +1,186 @@
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #337ab7;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #337ab7;
+    margin: 0 15px;
+    padding: 8px 12px;
+    border: 1px solid #337ab7;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #337ab7;
+    color: #fff;
+}
+
+main {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.employee-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.employee-table th, .employee-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.employee-table th {
+    background-color: #f2f2f2;
+}
+
+.employee-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* static/css/styles.css */
+.department-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.department-table th, .department-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.department-table th {
+    background-color: #f2f2f2;
+}
+
+.department-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* static/css/styles.css */
+.leave-requests-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.leave-requests-table th, .leave-requests-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.leave-requests-table th {
+    background-color: #f2f2f2;
+}
+
+.leave-requests-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.new-leave-request {
+    margin-top: 20px;
+}
+
+.new-leave-request button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+.new-attendance {
+    margin-top: 20px;
+}
+
+.new-attendance button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.new-attendance button:hover {
+    background-color: #45a049;
+}
+
+/* Add styling for the create task button */
+.tasks button {
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    padding: 10px 15px; /* Padding around the text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center the text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as inline block */
+    font-size: 16px; /* Set the font size */
+    margin-bottom: 10px; /* Add some bottom margin */
+}
+
+/* Style the button on hover */
+.tasks button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Add styling for the employee detail table */
+.employee-detail {
+    width: 100%;
+    border-collapse: collapse; /* Collapse borders between table cells */
+    margin-top: 20px; /* Add some top margin */
+}
+
+.employee-detail th, .employee-detail td {
+    border: 1px solid #ddd; /* Add borders to table cells */
+    padding: 8px; /* Add padding to table cells */
+    text-align: left; /* Align text to the left in table cells */
+}
+
+.employee-detail th {
+    background-color: #f2f2f2; /* Light gray background for table header cells */
+}

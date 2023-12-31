@@ -1,0 +1,15 @@
+<!-- templates/leave_request_create.html -->
+{% extends 'base.html' %}
+
+{% block title %}Create Leave Request{% endblock %}
+
+{% block content %}
+  <section class="form-container">
+    <h2>Create Leave Request</h2>
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+{% endblock %}
